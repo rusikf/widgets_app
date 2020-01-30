@@ -1,0 +1,6 @@
+= simple_form_for(resource, as: resource_name, url: session_path(resource_name), remote: true) do |f|
+  .form-inputs
+    = f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email" }
+    = f.input :password, required: true, input_html: { autocomplete: "password" }
+  .modal-footer
+    = f.button :submit, title, class: "btn btn-primary"

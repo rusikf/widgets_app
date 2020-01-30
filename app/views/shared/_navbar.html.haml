@@ -1,0 +1,17 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  - if user_signed_in?
+    = current_user.email
+  %button.navbar-toggler{"aria-controls" => "navbarText", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarText", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarText.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+    %span.navbar-text
+      - if user_signed_in?
+        = link_to "Logout", destroy_user_session_path, method: :delete
+      - else
+        = link_to "Login", "", data: { toggle: "modal", target: ".login-modal" }
+        |
+        = link_to "Sign up", "", data: { toggle: "modal", target: ".signup-modal" }
+
+= render partial: 'login_form', layout: 'layouts/modal', locals: { modal_class: 'login-modal', title: 'Sign in' }
+= render partial: 'signup_form', layout: 'layouts/modal', locals: { modal_class: 'signup-modal', title: 'Sign up' }
