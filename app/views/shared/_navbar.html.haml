@@ -13,5 +13,5 @@
         |
         = link_to "Sign up", "", data: { toggle: "modal", target: ".signup-modal" }
 
-= render partial: 'login_form', layout: 'layouts/modal', locals: { modal_class: 'login-modal', title: 'Sign in' }
-= render partial: 'signup_form', layout: 'layouts/modal', locals: { modal_class: 'signup-modal', title: 'Sign up' }
+= render partial: 'base/login_form', layout: 'layouts/modal', locals: { modal_class: 'login-modal', title: 'Sign in' }
+= render partial: 'base/signup_form', layout: 'layouts/modal', locals: { modal_class: 'signup-modal', title: 'Sign up' }
