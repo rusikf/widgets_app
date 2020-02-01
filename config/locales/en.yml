@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  widgets:
+    index:
+      no_widgets: 'There are no widgets, please create at least one.'
