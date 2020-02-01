@@ -1,2 +1,9 @@
+- if user_signed_in?
+  .row
+    .col-12
+      = form_tag new_widget_path, method: :get do
+        %button.float-right.btn.btn-primary{ type: :submit } Create widget
+  %br
+
 .row
   = render(@widgets) || t('.no_widgets')

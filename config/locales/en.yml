@@ -34,3 +34,10 @@ en:
   widgets:
     index:
       no_widgets: 'There are no widgets, please create at least one.'
+    create:
+      success: 'Widget has been successfully created.'
+    destroy:
+      success: 'Widget has been successfully destroyed.'
+      error: 'Widget cannot be destroyed.'
+    update:
+      success: 'Widget has been successfully updated'
