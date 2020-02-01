@@ -1,2 +1,2 @@
 .row
-  = render @widgets
+  = render(@widgets) || t('.no_widgets')

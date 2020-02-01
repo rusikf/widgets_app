@@ -16,8 +16,8 @@ module Api
       }
     end
 
-    def app_header
-      'Bearer b530f9ad13a061b36aa342b255608e18960db09cfd977cab8c1de9a0f8226024'
+    def app_token
+      'b530f9ad13a061b36aa342b255608e18960db09cfd977cab8c1de9a0f8226024'
     end
 
     def parse_response(res)
