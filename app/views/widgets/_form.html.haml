@@ -1,0 +1,7 @@
+= simple_form_for form, url: url do |f|
+  - if f.object.errors[:base].present?
+    = f.error_notification message: f.object.errors[:base].to_sentence
+  = f.input :name
+  = f.input :description, as: :text
+  = f.input :kind, as: :boolean, class: 'form-control', label: 'Visible'
+  = f.button :submit, value: btn, data: { disable_with: 'Saving...' } , class: 'btn btn-primary'
