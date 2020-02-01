@@ -1,8 +1,12 @@
-%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+%navbar.navbar.navbar-expand-lg.navbar-dark.bg-primary
+  %a{ class: 'navbar-brand' } Widgets App
   - if user_signed_in?
     = current_user.email
   %button.navbar-toggler{"aria-controls" => "navbarText", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarText", "data-toggle" => "collapse", :type => "button"}
     %span.navbar-toggler-icon
+  %form.form-inline.my-2.my-lg-0{ class: root_path }
+    %input.form-control.mr-sm-2{:placeholder => "Widget name", :type => "text", :name => 'q', value: params[:q].presence }/
+    %button.btn.btn-secondary.my-2.my-sm-0{:type => "submit"} Search widgets
   #navbarText.collapse.navbar-collapse
     %ul.navbar-nav.mr-auto
     %span.navbar-text
