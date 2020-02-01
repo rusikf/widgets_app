@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2020_02_01_074644) do
     t.datetime "remember_created_at"
     t.string "first_name"
     t.string "last_name"
+    t.string "uid"
     t.json "token", default: {}
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

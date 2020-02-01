@@ -1,7 +1,10 @@
 .col-sm-4
   .card.border-primary.mb-3
     .card-header
-      = widget.name
+      - if widget.user_id.blank?
+        = widget.name
+      - else
+        = link_to widget.name, user_path(widget.user_id)
       - if user_signed_in?
         = link_to widget_path(widget), method: :delete, data: { confirm: 'Are you sure?' }  do
           %i.fa.fa-trash.pull-right

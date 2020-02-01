@@ -17,7 +17,7 @@ module Widgets
         record
       end
     end
-    
+
     private
 
     attr_reader :api_data

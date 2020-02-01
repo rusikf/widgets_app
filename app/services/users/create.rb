@@ -6,14 +6,15 @@ class Users::Create
   end
 
   def call
-    token = Api::UsersAgent.new.create(
+    api_data = Api::UsersAgent.new.create(
       first_name: user.first_name,
       last_name: user.last_name,
       password: user.encrypted_password,
       email: user.email
     ) if fields_exists?
 
-    user.token = token['token']
+    user.token = api_data['token']
+    user.uid = api_data['user']['id']
     user.save
     user
   end

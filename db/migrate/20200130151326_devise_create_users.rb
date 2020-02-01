@@ -33,6 +33,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       t.string :first_name
       t.string :last_name
+      t.string :uid
       t.json :token, default: {}
       t.timestamps null: false
     end
