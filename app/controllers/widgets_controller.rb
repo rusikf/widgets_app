@@ -23,7 +23,7 @@ class WidgetsController < BaseController
 
   def update
     @form = Widgets::Form.from_params(params)
-    Widgets::Update.call(@form, current_user) do 
+    Widgets::Update.call(@form, current_user) do
       on(:ok) { redirect_to(root_path, flash: { notice: t('.success') }) }
       on(:invalid) { render(:edit) }
     end

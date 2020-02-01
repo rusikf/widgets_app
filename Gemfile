@@ -15,6 +15,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'haml'
 gem 'simple_form'
+gem 'react-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
