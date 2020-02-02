@@ -1,5 +1,9 @@
 module Api
   class UsersAgent < BaseAgent
+    def show(uid, user_token)
+      res = RestClient.get "#{host}/users/#{uid}", { 'Authorization' => "Bearer #{user_token}"}
+      parse_response(res)
+    end
 
     def create(opts)
       res = RestClient.post "#{host}/users", { user: opts }.merge(base_opts), { 'Content-Type' => 'application/json', 'accept' => 'json' } # TODO: remove headers?

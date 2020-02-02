@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+0) Optional ( if use rvm )
+`rvm install 2.6.5
+touch .ruby-version
+echo 2.6.5 >> .ruby-version
+touch .ruby-gemset
+echo widgets >> .ruby-gemset`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1) `bundle install`
+2) `rails s`
