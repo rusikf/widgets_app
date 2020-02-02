@@ -11,7 +11,7 @@ var Widgets = createReactClass({
         <div className="row">
           {
             this.props.items.map((item) => {
-              return <Widget name={item.name} description={item.description} key={item.id} signedIn={item.signedIn}/>
+              return <Widget name={item.name} description={item.description} key={item.id} signedIn={this.props.signedIn} id={item.id}/>
             })
           }
         </div>
